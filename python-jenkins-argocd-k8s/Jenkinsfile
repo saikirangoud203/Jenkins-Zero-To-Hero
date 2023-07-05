@@ -10,8 +10,8 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                git credentialsId: 'f87a34a8-0e09-45e7-b9cf-6dc68feac670', 
-                url: 'https://github.com/iam-veeramalla/cicd-end-to-end',
+                git credentialsId: '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', 
+                url: 'https://github.com/saikirangoud203/Jenkins-Zero-To-Hero',
                 branch: 'main'
            }
         }
@@ -21,7 +21,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:${BUILD_NUMBER} .
+                    docker build -t 281092/cicd-e2e:${BUILD_NUMBER} .
                     '''
                 }
             }
